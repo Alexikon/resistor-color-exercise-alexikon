@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ResistorColorsExercise"
+             mc:Ignorable="d"
+             x:Class="ResistorColorsExercise.ColorsToValue"
+             Title="Colors to Value">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="0, 15, 0, 0" />
+        </Style>
+
+        <Style TargetType="BoxView">
+            <Setter Property="WidthRequest" Value="20" />
+        </Style>
+
+        <Style TargetType="BoxView" x:Key="BeginEndBox">
+            <Setter Property="HeightRequest" Value="20" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            
+            <Label Text="Color 1" FontSize="Large" />
+            <Picker Title="Select color 1"
+                    TitleColor="Red" 
+                    ItemsSource="{Binding Path=Colors1}"
+                    SelectedItem="{Binding Path=SelectedColor1}" />
+
+            <Label Text="Color 2" FontSize="Large" />
+            <Picker Title="Select color 2"
+                    TitleColor="Red" 
+                    ItemsSource="{Binding Path=Colors2}" 
+                    SelectedItem="{Binding Path=SelectedColor2}"/>
+
+            <Label Text="Color 3" FontSize="Large" />
+            <Picker Title="Select color 3"
+                    TitleColor="Red" 
+                    ItemsSource="{Binding Path=Colors3}" 
+                    SelectedItem="{Binding Path=SelectedColor3}" />
+
+            <Button Text="Calculate" Clicked="CalculateResistor" />
+            <Label Text="{Binding Path=Result}" />
+
+            <StackLayout Orientation="Horizontal">
+                <BoxView Style="{StaticResource BeginEndBox}"
+                         Color="LightGray"
+                         WidthRequest="40"
+                         HeightRequest="20"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="DarkGoldenrod"
+                         WidthRequest="40"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="{Binding Path=SelectedColor1}"
+                         WidthRequest="20"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="DarkGoldenrod"
+                         WidthRequest="20"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="{Binding Path=SelectedColor2}"
+                         WidthRequest="20"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="DarkGoldenrod"
+                         WidthRequest="20"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="{Binding Path=SelectedColor3}"
+                         WidthRequest="20"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="DarkGoldenrod"
+                         WidthRequest="30"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="Gold"
+                         WidthRequest="20"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="DarkGoldenrod"
+                         WidthRequest="40"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="LightGray"
+                         WidthRequest="40"
+                         HeightRequest="20"
+                         VerticalOptions="Center" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

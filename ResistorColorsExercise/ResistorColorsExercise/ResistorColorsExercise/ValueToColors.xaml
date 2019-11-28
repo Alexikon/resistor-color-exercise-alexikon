@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ResistorColorsExercise.ValueToColors"
+             Title="Value to Colors">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="0, 15, 0, 0" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+
+            <Label Text="Enter a Number" FontSize="Large" />
+            <Entry Text="{Binding Path=Input}" Keyboard="Numeric" />
+
+            <Button Text="Calculate" Clicked="CalculateColors" />
+            <Label Text="{Binding Path=Result}" FontSize="Large" />
+
+            <StackLayout Orientation="Horizontal">
+                <BoxView Color="LightGray"
+                         WidthRequest="40"
+                         HeightRequest="20"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="DarkGoldenrod"
+                         WidthRequest="40"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="{Binding Path=Color1}"
+                         WidthRequest="20"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="DarkGoldenrod"
+                         WidthRequest="20"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="{Binding Path=Color2}"
+                         WidthRequest="20"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="DarkGoldenrod"
+                         WidthRequest="20"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="{Binding Path=Color3}"
+                         WidthRequest="20"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="DarkGoldenrod"
+                         WidthRequest="30"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="Gold"
+                         WidthRequest="20"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="DarkGoldenrod"
+                         WidthRequest="40"
+                         HeightRequest="100"
+                         VerticalOptions="Center" />
+
+                <BoxView Color="LightGray"
+                         WidthRequest="40"
+                         HeightRequest="20"
+                         VerticalOptions="Center" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
